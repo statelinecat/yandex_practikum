@@ -9,10 +9,12 @@ num_digits = len(str(max_num))
 # Построение прямоугольника
 current = 1
 for i in range(N):
-    row = ""
+    row = []
     for j in range(M):
-        # Форматируем число с учетом ширины
-        row += f"{current:{num_digits}d} "
+        # Форматируем число с учетом ширины и добавляем в список
+        row.append(f"{current:>{num_digits}}")
         current += 1
-    # Убираем последний пробел и добавляем перевод строки
-    print(row.strip())
+    # Соединяем числа в строку с пробелами между ними
+    print(" ".join(row))
+
+
