@@ -1,2 +1,4 @@
-for a, b in zip(input().split(", "), input().split(", ")):
-    print(f"{a} - {b}")
+a = input().split(", ")
+b = input().split(", ")
+for x, y in zip(a, b):
+    print(f"{x} - {y}")
