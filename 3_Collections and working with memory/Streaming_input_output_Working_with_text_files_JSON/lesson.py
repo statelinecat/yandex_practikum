@@ -1,6 +1,9 @@
 from sys import stdin
 
 lines = []
-for line in stdin:
-    lines.append(line)
+try:
+    for line in stdin:
+        lines.append(line)
+except KeyboardInterrupt:  # Если пользователь нажмет Ctrl+C
+    pass
 print(lines)
